@@ -1,0 +1,17 @@
+import React,{useContext,createContext} from 'react'
+export const AuthDataContext = createContext();
+const AuthContext = ({children}) => {
+  // const serverUrl="https://vibeshare-backend-j92a.onrender.com";
+  const serverUrl="http://localhost:8901";
+  const value={
+    serverUrl
+  }
+
+  return (
+    <AuthDataContext.Provider value={value}>
+      {children}
+    </AuthDataContext.Provider>
+  )
+}
+
+export default AuthContext
